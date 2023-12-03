@@ -82,17 +82,55 @@ function User_CPT_Form_function(){
   // custom post type form css
   $html.='
     <style>
-    .container{
-      width: 300px;
-      margin:auto;
-
-    }
+      /* Apply styles to the form container */
+      .website-form-container {
+          width: 300px;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: #fff;
+      }
+      
+      /* Style labels for better readability */
+      .website-form-container label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: bold;
+      }
+      
+      /* Style text inputs */
+      .website-form-container input[type="text"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 16px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+      }
+      
+      /* Style the submit button */
+      .website-form-container input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s;
+      }
+      
+      .website-form-container input[type="submit"]:hover {
+          background-color: #45a049;
+      }
     </style>
     
   ';
   // custom post type form html
   $html.='
-  <div class="container">
+  <div class="website-form-container">
   <form action="#" method="POST">
   <label for="fname">User Name</label><br>
   <input type="text" id="Uname" name="Uname" /><br>
