@@ -12,10 +12,7 @@ This plugin is created for websites Custom Post Type.(Ropstam)
 
 # Create Custom Post Types: ==========
 
-  function my_custom_post_websites() {
-
-      //labels array added inside the function and precedes args array
-      
+  function my_custom_post_websites() {      
       $labels = array(
       'name'                 => _x( 'Websites', 'Post type general name' ),
       'singular_name'        => _x( 'Websites', 'Post type singular name' ),
@@ -33,9 +30,7 @@ This plugin is created for websites Custom Post Type.(Ropstam)
       'parent_item_colon'    => '',
       'menu_name'            => 'Websites'
       );
-      
-      // args array
-      
+            
       $args = array(
         'labels'             => $labels,
         'description'        => 'Displays websites articles',
