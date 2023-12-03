@@ -125,9 +125,8 @@ function User_CPT_Form_function(){
       .website-form-container input[type="submit"]:hover {
           background-color: #45a049;
       }
-    </style>
-    
-  ';
+    </style>';
+	
   // custom post type form html
   $html.='
   <div class="website-form-container">
@@ -138,8 +137,8 @@ function User_CPT_Form_function(){
   <input type="text" id="Websiteurl" name="Websiteurl" /><br>
   <input type="submit" name="submit" value="Submit"/>
   </form>
-  
   </div>';
+	
   // Custom post type Create post object
   if (isset($_POST['submit'])) {
     // Storing the elements of the webpage into an array
@@ -147,6 +146,7 @@ function User_CPT_Form_function(){
 
     // 1. traversing through each element of the array
     // 2.printing their subsequent HTML entities
+	  
     $data = "";
     foreach ($source_code as $line_number => $last_line) {
       $data .= nl2br(htmlspecialchars($last_line) . "\n");
@@ -161,20 +161,13 @@ function User_CPT_Form_function(){
       'meta_input' => array(
         'website_url' => $code
       )
-      
-      
     );
-    
     // Insert the post into the database
     wp_insert_post( $my_post );
   }
-    
-  
-  
   // js
   $html.='';
   return $html;
-
 }
 add_shortcode('User_CPT_Form','User_CPT_Form_function');
 
